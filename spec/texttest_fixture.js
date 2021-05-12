@@ -14,24 +14,21 @@ const items = [
   // This Conjured item does not work properly yet
   new Item("Conjured Mana Cake", 3, 6),
 ];
-const itemsV2 = items.map(item => ({ ...item }));
 
 const days = Number(process.argv[2]) || 2;
 const gildedRose = new Shop(items);
-const gildedRoseV2 = new Shop(itemsV2);
-// console.log(gildedRoseV2)
 
-console.log("OMGHAI!");
+// console.log("OMGHAI!");
+// for (let day = 0; day < days; day++) {
+//   console.log(`\n-------- day ${day} --------`);
+//   console.log("name, sellIn, quality");
+//   items.forEach(item => console.log(`${item.name}, ${item.sellIn}, ${item.quality}`));
+//   gildedRose.updateQuality();
+// }
+console.log("\n_______________V2__________________");
 for (let day = 0; day < days; day++) {
   console.log(`\n-------- day ${day} --------`);
   console.log("name, sellIn, quality");
-  items.forEach(item => console.log(`${item.name}, ${item.sellIn}, ${item.quality}`));
+  gildedRose.items.forEach(item => console.log(`${item.name}, ${item.sellIn}, ${item.quality}`));
   gildedRose.updateQuality();
-}
-console.log("v2")
-for (let day = 0; day < days; day++) {
-  console.log(`\n-------- day ${day} --------`);
-  console.log("name, sellIn, quality");
-  gildedRoseV2.items.forEach(item => console.log(`${item.name}, ${item.sellIn}, ${item.quality}`));
-  gildedRoseV2.updateQualityV2();
 }
