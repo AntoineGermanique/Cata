@@ -80,5 +80,6 @@ const updateQualityProperty = (item, quality) => {
 
 module.exports = {
   Item,
-  Shop
+  Shop,
+  updateQualityProperty
 }
